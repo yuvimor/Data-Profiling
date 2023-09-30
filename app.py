@@ -1,7 +1,7 @@
-import streamlit as st 
-import pandas as pd 
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+import streamlit as st
+import pandas as pd
+from ydata_profiling import ProfileReport  
+from st_ydata_profiling_report import st_ydata_profiling_report  
 import sys
 import os
 
