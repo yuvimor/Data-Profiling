@@ -68,15 +68,15 @@ if uploaded_file is not None:
                 df = xl.parse(sheet_name=sheet_name)
                 print("sheet_name = ",sheet_name)
                 
-                sucess = True
+                success = True
             elif ext == '.csv':
                 df = pd.read_csv(uploaded_file)
-                sucess = True
+                success = True
         else:
             st.error('Kindly upload only csv and xls file')
-            sucess = False
+            success = False
 
-    if sucess:                        
+    if success:                        
         with st.spinner('Please wait while processing'):
             #print(minimal)    
             pr = ProfileReport(df,
