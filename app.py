@@ -5,21 +5,6 @@ from streamlit_pandas_profiling import st_profile_report
 import sys
 import os
 
-# Install matplotlib if it is not already installed
-try:
-    importlib.import_module("matplotlib")
-except ModuleNotFoundError:
-    sys.path.append("/usr/local/lib/python3.9/site-packages")
-    importlib.import_module("matplotlib")
-    
-# Ignore matplotlib deprecation warnings
-import warnings
-
-def ignore_mpl_deprecations():
-    warnings.filterwarnings("ignore", category=matplotlib.cbook.mplDeprecation)
-
-ignore_mpl_deprecations()
-
 st.set_page_config(page_title="Data Profiler", layout="wide")
 
 def get_filesize(file):
