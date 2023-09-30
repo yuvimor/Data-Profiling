@@ -5,6 +5,14 @@ from streamlit_pandas_profiling import st_profile_report
 import sys
 import os
 
+# Ignore matplotlib deprecation warnings
+import warnings
+
+def ignore_mpl_deprecations():
+    warnings.filterwarnings("ignore", category=matplotlib.cbook.mplDeprecation)
+
+ignore_mpl_deprecations()
+
 st.set_page_config(page_title="Data Profiler", layout="wide")
 
 def get_filesize(file):
