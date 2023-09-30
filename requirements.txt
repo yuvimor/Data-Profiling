@@ -1,7 +1,7 @@
 numpy
 pandas
 scipy
-matplotlib
+matplotlib>=3.4.3
 streamlit
 openpyxl
 pandas-profiling
